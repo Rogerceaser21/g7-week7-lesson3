@@ -1593,21 +1593,18 @@ ul.plain li::before { color:var(--p-i-ink); }
     <p class="eyebrow reveal">// lesson_1 · step_1</p>
     <h2 class="reveal" style="margin-bottom:calc(var(--element-gap) * 0.28)">Step 1: Stop at the marker</h2>
     <p class="reveal" style="margin-bottom:calc(var(--element-gap) * 0.3); display:flex; flex-wrap:wrap; gap:0.6em; align-items:center"><a class="linkbtn" href="https://spike.legoeducation.com/prime/project" target="_blank" rel="noopener">▶ the SPIKE online app</a><a class="linkbtn" href="https://classroom.google.com/c/ODc2MDk1NjQ1NzY0/m/ODc2MDk1NjQ1Nzk0/details" target="_blank" rel="noopener">▶ Challenge 3 Support (Classroom)</a><span class="chip red">Start 30 cm from the marker. Measure it.</span></p>
-    <div class="two-col" style="align-items:start; grid-template-columns:minmax(0,5fr) minmax(0,4fr)">
+    <div class="two-col" style="align-items:start; grid-template-columns:minmax(0,6fr) minmax(0,4fr)">
       <div>
         <ul class="steps" style="gap:calc(var(--element-gap) * 0.14)">
-          <li class="reveal"><b>A stack</b> is a column of blocks joined together. Try stack A, then stack B. Run each one 3 times.</li>
+          <li class="reveal"><b>A stack</b> is a column of joined blocks. Try stack A, then B, 3 times each. 1 rotation is one full wheel spin.</li>
           <li class="reveal"><b>Now move the marker a little.</b> Run both stacks again.</li>
           <li class="reveal"><b>Which one stops at the marker every time?</b> That is the one you keep.</li>
           <li class="reveal"><b>How the sensor works:</b> LEGO calls it a sound wave sensor. It measures how far away the marker is, in cm.</li>
           <li class="reveal"><b>Pass:</b> the car stops in front of the marker without touching it, 3 runs in a row.</li>
-          <li class="reveal">Use <b>your own port letters</b>. A port letter names the hub socket a part plugs into. Read yours off the bar at the top of the app.</li>
+          <li class="reveal">Use <b>your own port letters</b>: the hub socket each part plugs into.</li>
         </ul>
       </div>
-      <div class="stackpair reveal">
-        <div><p class="stacklabel">Stack A: no sensor (1 rotation is one full spin of the wheel)</p><div class="codestack"><span class="blk events">when program starts</span><span class="blk movement">set movement motors to <i>your wheels</i></span><span class="blk movement">move ↑ for 1 rotations</span></div></div>
-        <div><p class="stacklabel">Stack B: with the sensor</p><div class="codestack"><span class="blk events">when program starts</span><span class="blk movement">set movement motors to <i>your wheels</i></span><span class="blk movement">set movement speed to 25 %</span><span class="blk movement">start moving ↑</span><span class="blk control">wait until <span class="blk sensors">is closer than 10 cm</span></span><span class="blk movement">stop moving</span></div></div>
-      </div>
+      <div class="col-img picfig pic-big reveal"><p class="stacklabel">Left: stack A, no sensor. Right: stack B, with the sensor.</p><img class="photo" src="assets/code-stacks-a-b.png" alt="SPIKE app code. Left, stack A: when program starts, set movement motors to A+B, move forward for 1 rotations. Right, stack B: when program starts, set movement motors to A+B, set movement speed to 25 percent, start moving forward, wait until F is closer than 10 cm, stop moving"><p class="small" style="margin-top:4px">From the SPIKE app. Your letters may be different.</p></div>
     </div>
   </div>
 </section>
@@ -1696,8 +1693,8 @@ ul.plain li::before { color:var(--p-i-ink); }
           <li class="reveal"><b>Swap after each try.</b> Write each try in your tries table.</li>
         </ul>
       </div>
-      <div class="reveal"><div class="codestack"><span class="blk events">when program starts</span><span class="blk movement">set movement motors to <i>your wheels</i></span><span class="blk movement">set movement speed to 25 %</span><span class="blk movement">start moving ↑</span><span class="blk control">wait until <span class="blk sensors">is closer than 10 cm</span></span><span class="blk movement">stop moving</span><span class="blk motors new"><i>your arm</i> run ↺ for 0.5 rotations</span></div>
-        <p class="small" style="margin-top:6px">The new block is the one with the gold edge.</p>
+      <div class="reveal"><div class="picfig"><img class="photo" src="assets/code-grab.png" alt="SPIKE app code: stack B with C run for 0.5 rotations added at the bottom to lower the arm"><p class="small" style="margin-top:4px">From the SPIKE app. The new block is the last one: C run for 0.5 rotations.</p></div>
+        
         <div class="hintcard" style="margin-top:0.6em">
           <button class="linkbtn gold" type="button" data-tap-toggle="#hintArm" data-open-text="▶ Hide the hint" data-shut-text="▶ Hint: which motor is the arm?">▶ Hint: which motor is the arm?</button>
           <div id="hintArm" class="tblock i" hidden><p style="line-height:1.35">The arm is the motor that does not drive a wheel. Read its letter off the bar along the top of the app.</p></div>
@@ -1738,8 +1735,8 @@ ul.plain li::before { color:var(--p-i-ink); }
           <li class="reveal"><b>Done?</b> Run the whole trip: stop, grab, turn round, drive home. Then the Level up slide.</li>
         </ul>
       </div>
-      <div class="reveal"><div class="codestack"><span class="blk events">when program starts</span><span class="blk movement">set movement motors to <i>your wheels</i></span><span class="blk movement">set movement speed to 25 %</span><span class="blk movement">start moving ↑</span><span class="blk control">wait until <span class="blk sensors">is closer than 10 cm</span></span><span class="blk movement">stop moving</span><span class="blk motors"><i>your arm</i> run ↺ for 0.5 rotations</span><span class="blk movement new">move right: 100 for <b>?</b> rotations</span><span class="blk movement new">move ↑ for <b>?</b> cm</span></div>
-        <p class="small" style="margin-top:6px">The two new blocks have the gold edge. You find the ? numbers.</p>
+      <div class="reveal"><div class="picfig"><img class="photo" src="assets/code-go-home.png" alt="SPIKE app code: stack B, then C run for 0.5 rotations, move right: 100 for 1 rotations, move forward for 20 cm"><p class="small" style="margin-top:4px">From the SPIKE app. The last two blocks turn the car round and drive it home. Change the numbers to fit your car.</p></div>
+        
       </div>
       <div class="hintcol">
         <div class="reveal hintcard">
@@ -2403,7 +2400,7 @@ ul.plain li::before { color:var(--p-i-ink); }
    The slides the teacher has hidden persist the same way, under their own version-keyed
    name, so a hide survives a refresh mid-lesson but never outlives a push.
    Everything else (font scale, iSAMS state, timers) stays session-only. */
-const DECK_VERSION = 'v20261015-130901';
+const DECK_VERSION = 'v20261015-135049';
 const SHEET_URL = 'https://docs.google.com/presentation/d/164ztoHOjzLhUhRigS4tgxCB-h0RX5yzjyEC3S0p0Fko/edit';
 
 /* ===========================================
@@ -6457,7 +6454,9 @@ ul.plain li::before { color:var(--motors); }
 .codestack .blk.events, .codestack .blk.control { color:#231A08; }
 .codestack .blk .blk { display:inline-block; padding:0.05em 0.4em; margin-left:0.2em; color:#fff; }
 .codestack .blk.new { outline:4px solid #E8B500; outline-offset:2px; }
-.stackpair { display:grid; grid-template-columns:1fr; gap:0.8em; }
+.stackpair { display:grid; grid-template-columns:1fr 1fr; gap:0.8em; align-items:start; }
+.stackpair .picfig img, #grabCube .picfig img, #goHome .picfig img { max-height:52vh; width:auto; max-width:100%; }
+#stopMarker .picfig img { max-height:30vh; }
 .stacklabel { font-family:var(--font-label); font-weight:700; margin-bottom:0.25em; }
 </style>
 <style id="w7l2-style">
